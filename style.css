@@ -91,6 +91,61 @@
 	margin: 20px auto 5px;
 	
 }
+.vlogscontent
+{
+	position: relative;
+	padding-bottom: 56.25%;
+	padding-top: 25px;
+	height: 0px;
+}
+
+.vlogscontent iframe
+{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	height: 100%;
+	width: 100%;
+}
+.vlogscontent2
+{
+	position: relative;
+	padding-bottom: 56.25%;
+	padding-top: 25px;
+	height: 0px;
+}
+
+.vlogscontent2 iframe
+{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	height: 100%;
+	width: 100%;
+}
+.vlogscontent3
+{
+	position: relative;
+	padding-bottom: 56.25%;
+	padding-top: 25px;
+	height: 0px;
+}
+
+.vlogscontent3 iframe
+{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	height: 100%;
+	width: 100%;
+}
+
 #contact
 {
 	padding-top: 50px;
