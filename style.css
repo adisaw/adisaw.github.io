@@ -129,6 +129,15 @@
     box-sizing: border-box;
 }
 
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
 @media(min-width: 768px) {
     .col-md-4 {
         max-width: 33.33333%;
