@@ -220,6 +220,49 @@
 	<script>
 	var scroll = new SmoothScroll('a[href*="#"]');
 	</script>
+	<script>
+	window.addEventListener('DOMContentLoaded', function () {
+		var items = document.querySelectorAll('.steps-container');
+		items.forEach(function (item) {
+			var content = item.querySelector('.timeline-content');
+			if (!content) {
+				return;
+			}
+			var existingToggle = content.querySelector('.timeline-toggle');
+			var toggle = existingToggle;
+			if (!toggle) {
+				toggle = document.createElement('button');
+				toggle.className = 'timeline-toggle';
+				toggle.type = 'button';
+				content.appendChild(toggle);
+			}
+			var setState = function (expanded) {
+				item.classList.toggle('is-expanded', expanded);
+				toggle.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+				toggle.textContent = expanded ? 'Hide details' : 'View details';
+			};
+			setState(false);
+			toggle.addEventListener('click', function (event) {
+				event.stopPropagation();
+				setState(!item.classList.contains('is-expanded'));
+			});
+			item.addEventListener('click', function (event) {
+				if (event.target.closest('a') || event.target.closest('.timeline-toggle')) {
+					return;
+				}
+				setState(!item.classList.contains('is-expanded'));
+			});
+			item.addEventListener('keydown', function (event) {
+				if (event.key === 'Enter' || event.key === ' ') {
+					event.preventDefault();
+					setState(!item.classList.contains('is-expanded'));
+				}
+			});
+			item.setAttribute('tabindex', '0');
+			item.setAttribute('role', 'button');
+		});
+	});
+	</script>
 	</body>
 	
 </html>

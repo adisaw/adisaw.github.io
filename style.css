@@ -191,6 +191,46 @@ h2 {
 	position: relative;
 	margin-top: 32px;
   }
+.steps-container {
+	cursor: pointer;
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.steps-container:focus {
+	outline: 2px solid var(--primary);
+	outline-offset: 6px;
+}
+.steps-container:focus:not(:focus-visible) {
+	outline: none;
+}
+.steps-container .timeline-content {
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.steps-container:hover .timeline-content {
+	transform: translateY(-2px);
+	box-shadow: 0px 18px 36px rgb(0 11 30 / 12%);
+}
+.timeline-content p {
+	max-height: 4.8em;
+	overflow: hidden;
+	transition: max-height 0.3s ease, opacity 0.3s ease;
+	opacity: 0.85;
+}
+.steps-container.is-expanded .timeline-content p {
+	max-height: 500px;
+	opacity: 1;
+}
+.timeline-toggle {
+	border: none;
+	background: none;
+	color: var(--primary);
+	font-weight: 600;
+	margin-top: 12px;
+	padding: 0;
+	cursor: pointer;
+}
+.timeline-toggle:focus {
+	outline: none;
+}
   .steps::after {
 	content: "";
 	position: absolute;
