@@ -1,10 +1,9 @@
-*/
-
-#contact
-{
-	background: var(--surface-muted);
-	padding-top: 0;
+* {
+	margin: 0;
+	padding: 0;
 }
+
+:root {
 	--text: #1d2433;
 	--muted: #5f6b7a;
 	--primary: #182984;
@@ -165,17 +164,6 @@ h2 {
 	font-size: 14px;
 	letter-spacing: 0.04em;
 }
-/*-----Slider------*/
-#slider
-{
-	width: 100%;
-	padding: 12px 0 40px;
-}
-.carousel-inner {
-	border-radius: 24px;
-	overflow: hidden;
-	box-shadow: var(--shadow);
-}
 /*--------About---------*/
 #about
 {
@@ -186,6 +174,7 @@ h2 {
 }
 #timeline {
 	padding-top: 0;
+	background: var(--surface-muted);
 }
 #about h2
 {
@@ -218,7 +207,7 @@ h2 {
 	font-size: 2.2rem;
 	font-weight: 700;
 	color: #ffffff;
-	margin-bottom: 16px;
+	margin-bottom: 28px;
   }
   .section-header hr {
 	border: 1px solid #fff;
@@ -227,11 +216,11 @@ h2 {
   .bg-gradient_solid {
 	background: var(--primary-gradient);
 	color: #fff;
-	padding: 80px 0 48px;
+	padding: 80px 0 96px;
   }
   .steps {
 	position: relative;
-	margin-top: 32px;
+	margin-top: 56px;
   }
 .steps-container {
 	cursor: pointer;
@@ -271,6 +260,10 @@ h2 {
 	cursor: pointer;
 }
 .timeline-toggle:focus {
+	outline: 2px solid var(--primary);
+	outline-offset: 3px;
+}
+.timeline-toggle:focus:not(:focus-visible) {
 	outline: none;
 }
   .steps::after {
